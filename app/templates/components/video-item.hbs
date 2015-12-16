@@ -1,3 +1,8 @@
+{{#if video.Thumbnail}}
+  <a href="{{video.MessageContent}}" {{action 'play'}}>
+    <img src="https://cdn.voat.co/thumbs/{{video.Thumbnail}}" class='thumb'/>
+  </a>
+{{/if}}
 <h4><a href="{{video.MessageContent}}" {{action 'play'}}>{{video.Linkdescription}}</a></h4>
 <div class='meta'>
   (<span class='likes'>+{{video.Likes}}</span>
@@ -6,3 +11,4 @@
   posted by {{video.Name}} with
   <a href="https://voat.co/v/{{video.Subverse}}/comments/{{video.Id}}">{{video.CommentCount}} comments</a>
 </div>
+<div class='clearfix'></div>
