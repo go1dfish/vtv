@@ -3,7 +3,8 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   moment: Ember.inject.service(),
   beforeModel() {
-    this.get('moment').changeTimeZone('UTC');
+    moment.tz.add("Etc/UTC|UTC|0|0|");
+    this.get('moment').changeTimeZone('Etc/UTC');
   },
 
   model() {

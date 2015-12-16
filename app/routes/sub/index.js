@@ -6,7 +6,6 @@ export default Ember.Route.extend({
   model(args) {
     const posts = this.modelFor('sub').filter(post => {
       const url = post.MessageContent || '';
-      console.log('id', this.get('videos').parseTubeId(url));
       return url.match(/you/) && this.get('videos').parseTubeId(url);
     });
 
