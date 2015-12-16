@@ -6,6 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('sub', {path: '/:verse'}, function() {
+    
+  });
 });
 
 export default Router;

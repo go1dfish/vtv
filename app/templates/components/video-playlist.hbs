@@ -1,0 +1,8 @@
+{{#each videos.playlist as |post|}}
+  <div>
+    <h3><a href="{{post.MessageContent}}" {{action 'playItem' post}}>{{post.Linkdescription}}</a></h3>
+    <h4>by {{post.Name}} with
+        <a href="https://voat.co/v/{{post.Subverse}}/comments/{{post.Id}}">{{post.CommentCount}} comments</a></h4>
+    <h5>{{moment-to-now post.Date}}</h5>
+  </div>
+{{/each}}

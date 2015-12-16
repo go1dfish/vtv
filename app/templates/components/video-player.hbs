@@ -1,0 +1,8 @@
+{{#with videos.currentItemYtId as |id|}}
+
+  {{ember-youtube ytid=id class='pull-right'
+    ended="playNext" autoplay=true}}
+{{/with}}
+
+<button {{action 'playPrevious'}}>Previous</button>
+<button {{action 'playNext'}}>Next</button>
