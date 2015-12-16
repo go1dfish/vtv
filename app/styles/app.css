@@ -2,6 +2,6 @@ video-item {
   display: block;
 }
 
-.is-playing {
+video-playlist .is-playing {
   background-color: cyan;
 }
