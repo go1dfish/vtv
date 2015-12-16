@@ -30,10 +30,12 @@ export default Ember.Service.extend({
 
   parseTubeId: function(url) {
     var id = getParamByName(url, 'v');
-    if (!id) {
+
+    if (!id && url.match(/youtu\.be/)) {
       id = url.split('youtu.be/').pop();
       id = id.split(/(#|\?)/)[0];
     }
+
     return id;
   },
 

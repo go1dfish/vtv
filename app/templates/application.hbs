@@ -1,3 +1,9 @@
 <h2 id="title">VTV Alpha</h2>
 
+{{#each model as |sub|}}
+  {{link-to sub 'sub' sub}}
+{{/each}}
+
+<hr>
+
 {{outlet}}
