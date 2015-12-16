@@ -1,0 +1,7 @@
+video-item {
+  display: block;
+}
+
+.is-playing {
+  background-color: cyan;
+}
