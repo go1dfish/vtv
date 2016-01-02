@@ -1,0 +1,8 @@
+<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Subverse: {{label}} <span class="caret"></span>
+</button>
+<ul class="dropdown-menu">
+  {{#each subs as |sub|}}
+    <li>{{link-to sub 'sub' sub}}</li>
+  {{/each}}
+</ul>

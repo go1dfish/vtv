@@ -1,11 +1,22 @@
-{{video-item video=videos.currentItem}}
-
 {{#with videos.currentItemYtId as |id|}}
-
-  {{ember-youtube ytid=id class='pull-right'
-    width=980 height=625
-    ended="playNext" autoplay=true}}
+  <div class="embed-responsive embed-responsive-16by9">
+    {{ember-youtube ytid=id class='pull-right'
+      width=980 height=625
+      ended="playNext" autoplay=true}}
+  </div>
 {{/with}}
-
-<button {{action 'playPrevious'}}>Previous</button>
-<button {{action 'playNext'}}>Next</button>
+<ul class="pager row">
+    <li class="previous col-sm-1">
+      <a href="#" {{action 'playPrevious'}}>
+        <span class='glyphicon glyphicon-fast-backward'></span>
+      </a>
+    </li>
+    <li class='col-sm-10'>
+      {{video-item video=videos.currentItem}}
+    </li>
+    <li class="next col-sm-1">
+      <a href="#" {{action 'playNext'}}>
+        <span class='glyphicon glyphicon-fast-forward'></span>
+      </a>
+    </li>
+</ul>

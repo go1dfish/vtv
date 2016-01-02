@@ -1,2 +1,9 @@
-{{video-player}}
-{{video-playlist}}
+<div class="row">
+  <div class="col-md-9 spacing">
+    {{video-player}}
+  </div>
+  <div id='sidebar' class="col-md-3 spacing">
+    {{sub-list label=model.name}}
+    {{video-playlist id="vtv-playlist"}}
+  </div>
+</div>

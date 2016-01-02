@@ -1,7 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  tagName: 'video-playlist',
+  tagName: 'ul',
+  classNames: ['media-list', 'video-playlist', 'list-group'],
   videos: Ember.inject.service(),
 
   actions: {
