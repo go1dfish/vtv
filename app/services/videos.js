@@ -36,6 +36,12 @@ export default Ember.Service.extend({
       id = id.split(/(#|\?)/)[0];
     }
 
+    id = id.split(/[ \n\)]/)[0];
+
+    if (id && id.length < 7) {
+      return;
+    }
+
     return id;
   },
 
