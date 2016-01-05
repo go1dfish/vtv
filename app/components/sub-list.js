@@ -1,15 +1,66 @@
 import Ember from 'ember';
 
+const computed = Ember.computed;
+
 export default Ember.Component.extend({
   classNames: ['btn-group', 'sub-list'],
   classNameBindings: 'open',
   open: false,
 
+  label: computed('verse', {
+    get() {
+      return this.get('verse');
+    },
+
+    set(key, value) {
+      return value;
+    }
+  }),
+
   click() {
-    this.toggleProperty('open');
+    this.$('input').focus().select();
+
   },
 
-  subs: [
+  focusIn() {
+    this.set('open', true);
+  },
+
+  focusOut() {
+    Ember.run.later(() => {
+      this.set('open', false);
+      this.notifyPropertyChange('label');
+    }, 300);
+  },
+
+  isFiltering: computed('verse', 'label', {
+    get() {
+      return this.get('verse') !== this.get('label');
+    }
+  }),
+
+  _subs: computed('isFiltering', {
+    get() {
+      const isFiltering = this.get('isFiltering');
+      const label = this.get('label');
+      const re = new RegExp(label, 'i');
+
+      if (!isFiltering) {
+        return this.get('allSubs');
+      }
+
+      return Ember.ArrayProxy.extend({
+        subs: this.get('allSubs'),
+        content: computed.filter('subs', function(sub) {
+          return sub.match(re);
+        })
+      }).create();
+    }
+  }),
+
+  subs: computed.sort('_subs', (a, b) => Ember.compare(a, b)),
+
+  allSubs: [
     'Videos',
     'Documentaries',
     'Gaming',
@@ -51,5 +102,11 @@ export default Ember.Component.extend({
     'AvantGardeMusic',
     'ProgressiveTrance',
     'VideoGameSoundtracks'
-  ]
+  ],
+
+  actions: {
+    navToSub() {
+      this.sendAction('navToSub', this.get('label'));
+    }
+  }
 });

@@ -21,6 +21,7 @@ module.exports = function(defaults) {
   // along with the exports of each module as its value.
 
   app.import('bower_components/moment-timezone/moment-timezone.js');
+  app.import('bower_components/jquery.scrollintoview/jquery.scrollintoview.js');
 
 
   return app.toTree();

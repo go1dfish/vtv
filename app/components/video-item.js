@@ -13,6 +13,14 @@ export default Ember.Component.extend({
     }
   }),
 
+  didChangeIsPlaying: Ember.observer('isPlaying', function() {
+    const element = this.get('element');
+
+    if (this.get('isPlaying') && this.get('tagName') === 'li' && element) {
+      Ember.$(element).scrollintoview();
+    }
+  }),
+
   actions: {
     play() {
       this.get('videos').playVideo(this.get('video'));

@@ -5,5 +5,11 @@ export default Ember.Route.extend({
   beforeModel() {
     moment.tz.add("Etc/UTC|UTC|0|0|");
     this.get('moment').changeTimeZone('Etc/UTC');
+  },
+
+  actions: {
+    navToSub(sub) {
+      this.transitionTo('sub', sub);
+    }
   }
 });
