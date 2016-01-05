@@ -20,6 +20,11 @@ video-item {
   padding-bottom: 0.25em;
 }
 
+video-player {
+  display: block;
+  margin-top: 2px;
+}
+
 
 /* Hey, the empty css style rules are not used, I just left them there for a bit after I scraped an older non bootstrap version. Just sending in this early version.
 -subtenko */
