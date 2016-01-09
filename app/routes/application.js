@@ -9,7 +9,7 @@ export default Ember.Route.extend({
 
   actions: {
     navToSub(sub) {
-      this.transitionTo('sub', sub);
+      this.replaceWith('sub', sub);
     }
   }
 });
