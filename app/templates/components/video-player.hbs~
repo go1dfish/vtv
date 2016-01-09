@@ -6,12 +6,12 @@
   </div>
 {{/with}}
 <ul class="pager row">
-    <li class="previous col-xs-1">
+    <li class="previous col-sm-1">
       <a href="#" {{action 'playPrevious'}}>
         <span class='glyphicon glyphicon-fast-backward'></span>
       </a>
     </li>
-    <li class='col-xs-10'>
+    <li class='col-sm-10'>
       {{video-item video=videos.currentItem}}
     </li>
     <li class="next col-sm-1">
