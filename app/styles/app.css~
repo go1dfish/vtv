@@ -22,14 +22,8 @@ video-item {
 .video-playlist .is-playing {
      margin: 0px -1px;
     z-index: 9;
-    background: rgba(13,47,84,1);
-background: -moz-linear-gradient(top, rgba(13,47,84,1) 0%, rgba(17,55,95,1) 46%, rgba(12,47,95,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(13,47,84,1)), color-stop(46%, rgba(17,55,95,1)), color-stop(100%, rgba(12,47,95,1)));
-background: -webkit-linear-gradient(top, rgba(13,47,84,1) 0%, rgba(17,55,95,1) 46%, rgba(12,47,95,1) 100%);
-background: -o-linear-gradient(top, rgba(13,47,84,1) 0%, rgba(17,55,95,1) 46%, rgba(12,47,95,1) 100%);
-background: -ms-linear-gradient(top, rgba(13,47,84,1) 0%, rgba(17,55,95,1) 46%, rgba(12,47,95,1) 100%);
-background: linear-gradient(to bottom, rgba(13,47,84,1) 0%, rgba(17,55,95,1) 46%, rgba(12,47,95,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d2f54', endColorstr='#0c2f5f', GradientType=0 );
+    background: radial-gradient(ellipse farthest-corner at 0% 100% , rgba(27, 4, 87, 0.7) 10%, rgba(14, 54, 108, 0.3) 40%) repeat scroll 0% 0%, -moz-linear-gradient(center top , rgba(37, 6, 89, 0.3) 0%, rgba(16, 86, 86, 0.6) 100%) repeat scroll 0% 0%, #1F2E5D -moz-linear-gradient(60deg, #1D124E 0%, #1B2023 100%) repeat scroll 0% 0%;
+    box-shadow: 0px 0px 6px 0px #000;
 }
 
 
@@ -245,14 +239,9 @@ font-weight: bold;
 	bottom: 0px;
 	margin-bottom: 0px;
 	z-index: 999;
-	background: rgba(13,47,84,1);
-background: -moz-linear-gradient(top, rgba(13,47,84,1) 0%, rgba(17,55,95,1) 46%, rgba(12,47,95,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(13,47,84,1)), color-stop(46%, rgba(17,55,95,1)), color-stop(100%, rgba(12,47,95,1)));
-background: -webkit-linear-gradient(top, rgba(13,47,84,1) 0%, rgba(17,55,95,1) 46%, rgba(12,47,95,1) 100%);
-background: -o-linear-gradient(top, rgba(13,47,84,1) 0%, rgba(17,55,95,1) 46%, rgba(12,47,95,1) 100%);
-background: -ms-linear-gradient(top, rgba(13,47,84,1) 0%, rgba(17,55,95,1) 46%, rgba(12,47,95,1) 100%);
-background: linear-gradient(to bottom, rgba(13,47,84,1) 0%, rgba(17,55,95,1) 46%, rgba(12,47,95,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d2f54', endColorstr='#0c2f5f', GradientType=0 );
+	background: radial-gradient(ellipse farthest-corner at 0% 100% , rgba(9, 80, 173, 0.52) 10%, #052D4E 40%) repeat scroll 0% 0%, -moz-linear-gradient(center top , rgba(46, 10, 105, 0.82) 0%, rgba(3, 64, 156, 0.6) 100%) repeat scroll 0% 0%, #294296 -moz-linear-gradient(60deg, #183268 0%, #101D24 100%) repeat scroll 0% 0%;
+	opacity: 0.8;
+	box-shadow: 0px 0px 6px 1px #010103;
 }
 
 .pager li > a, .pager li > span {
